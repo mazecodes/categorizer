@@ -1,0 +1,20 @@
+{
+  "name": "categorizer",
+  "version": "0.1.0",
+  "description": "Tiny package to categorize array elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazecodes/categorizer.git"
+  },
+  "keywords": [],
+  "author": "Maze Peterson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mazecodes/categorizer/issues"
+  },
+  "homepage": "https://github.com/mazecodes/categorizer#readme"
+}
