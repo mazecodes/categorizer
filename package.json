@@ -8,6 +8,11 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier . --write"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mazecodes/categorizer.git"
