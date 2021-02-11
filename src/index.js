@@ -14,7 +14,11 @@ const categorize = (array, categorizers) => {
     array.forEach(element => {
       const key = categorizers(element);
 
-      result[key] = element;
+      if (!result[key]) {
+        result[key] = [];
+      }
+
+      result[key].push(element);
     });
 
     return result;
@@ -32,7 +36,11 @@ const categorize = (array, categorizers) => {
   array.forEach(element => {
     Object.keys(categorizers).forEach(categorizer => {
       if (categorizers[categorizer](element)) {
-        result[categorizer] = element;
+        if (!result[categorizer]) {
+          result[categorizer] = [];
+        }
+
+        result[categorizer].push(element);
       }
     });
   });
