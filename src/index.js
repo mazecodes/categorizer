@@ -1,3 +1,21 @@
+/**
+ * Categorize the given array
+ *
+ * @param {Array} array - Array to categorize
+ * @param {(Object|Function)} categorizers - The categorizer, can be either function or object
+ * @returns {Object} - A categorized object
+ *
+ * @example
+ *   categorize([0, 1, 2, 3, 4], element => {
+ *     if (element % 2 === 0) return 'even';
+ *     return 'odd';
+ *   })
+ *
+ *   categorize([0, 1, 2, 3, 4], {
+ *     odd: element => element % 2 !== 0,
+ *     even: element => element % 2 === 0,
+ *   })
+ */
 const categorize = (array, categorizers) => {
   const result = {};
 
