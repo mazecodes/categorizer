@@ -31,7 +31,7 @@ const categorize = (array, categorizers) => {
    */
   array.forEach(element => {
     Object.keys(categorizers).forEach(categorizer => {
-      if (categorizer(element)) {
+      if (categorizers[categorizer](element)) {
         result[categorizer] = element;
       }
     });
