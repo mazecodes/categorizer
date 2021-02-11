@@ -1,4 +1,19 @@
 /**
+ * Make a parameter required
+ *
+ * @param {String} name - The name of the parameter
+ * @returns {void}
+ *
+ * @example
+ *   const example = (name = required('name')) => {
+ *     console.log(name);
+ *   };
+ */
+const required = name => {
+  throw new Error(`${name} is required`);
+};
+
+/**
  * Categorize the given array
  *
  * @param {Array} array - Array to categorize
@@ -16,7 +31,10 @@
  *     even: element => element % 2 === 0,
  *   })
  */
-const categorize = (array, categorizers) => {
+const categorize = (
+  array = required('array'),
+  categorizers = required('categorizers')
+) => {
   const result = {};
 
   /**
@@ -32,11 +50,13 @@ const categorize = (array, categorizers) => {
     array.forEach(element => {
       const key = categorizers(element);
 
-      if (!result[key]) {
-        result[key] = [];
-      }
+      if (['string', 'number'].includes(typeof key)) {
+        if (!result[key]) {
+          result[key] = [];
+        }
 
-      result[key].push(element);
+        result[key].push(element);
+      }
     });
 
     return result;
@@ -53,6 +73,10 @@ const categorize = (array, categorizers) => {
    */
   array.forEach(element => {
     Object.keys(categorizers).forEach(categorizer => {
+      if (typeof categorizers[categorizer] !== 'function') {
+        return;
+      }
+
       if (categorizers[categorizer](element)) {
         if (!result[categorizer]) {
           result[categorizer] = [];
