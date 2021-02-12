@@ -11,3 +11,23 @@
 - [Author](#author)
 - [Support](#show-your-support)
 - [License](#license)
+
+## Install
+
+npm:
+
+```bash
+npm install categorizer
+```
+
+Yarn:
+
+```bash
+yarn add categorizer
+```
+
+GitHub:
+
+```bash
+git clone https://github.com/mazecodes/categorizer.git
+```
