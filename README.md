@@ -7,6 +7,7 @@
 
 - [Install](#install)
 - [Usage](#usage)
+- [Tests](#run-tests)
 - [Contributing](#contributing)
 - [Author](#author)
 - [Support](#show-your-support)
@@ -62,4 +63,10 @@ const result = categorize(array, value => {
   if (value % 2 === 0) return 'even';
   return 'odd';
 });
+```
+
+## Run tests
+
+```bash
+npm run test
 ```
