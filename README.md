@@ -96,4 +96,4 @@ Give a ⭐ if you liked this project!
 
 ## License
 
-[MIT](https://github.com/mazecodes/damnerror/blob/master/LICENSE) © Maze Peterson
+[MIT](https://github.com/mazecodes/categorizers/blob/master/LICENSE) © Maze Peterson
