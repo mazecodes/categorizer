@@ -70,3 +70,14 @@ const result = categorize(array, value => {
 ```bash
 npm run test
 ```
+
+## Contributing
+
+All contributions, issues and feature requests are welcome!<br>
+Please feel free to check [issues page](https://github.com/mazecodes/categorizer/issues).
+
+1. Fork the project
+1. Create your feature branch (`git checkout -b feature/AwesomeFeature`)
+1. Commit your changes (`git commit -m "Add Awesome Feature"`)
+1. Push to the branch (`git push origin feature/AwesomeFeature`)
+1. Open a Pull Request
